@@ -31,19 +31,19 @@
       msg: "Course Info: {{ course | items2dict }}" 
 
   - name: convert to lowercase
-    var:
+    vars:
       name: devi santhoshi
     ansible.builtin.debug:
       msg: "Hello {{ name | lower }}"  
 
   - name: convert to uppercase
-    var:
+    vars:
       name: devi santhoshi
     ansible.builtin.debug:
       msg: "Hello {{ name | upper }}"   
 
   - name: check ip address is valid or not
-    var:
+    vars:
       ip: "300.567.980.789"
     ansible.builtin.debug:
       msg: "{{ ip | ansible.utils.ipaddr }}"  
