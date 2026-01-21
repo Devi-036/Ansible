@@ -8,4 +8,4 @@
 
   - name: print the outcome
     ansible.builtin.debug:
-      msg: "{{ commond_result }}"
+      msg: "{{ command_result }}"
