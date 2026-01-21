@@ -28,4 +28,22 @@
       - {'key': 'duration', 'value': '10hr'}
       - {'key': 'trainer', 'value': 'Devi'}
     ansible.builtin.debug:
-      msg: "Course Info: {{ course | items2dict }}"        
+      msg: "Course Info: {{ course | items2dict }}" 
+
+  - name: convert to lowercase
+    var:
+      name: devi santhoshi
+    ansible.builtin.debug:
+      msg: "Hello {{ name | lower }}"  
+
+  - name: convert to uppercase
+    var:
+      name: devi santhoshi
+    ansible.builtin.debug:
+      msg: "Hello {{ name | upper }}"   
+
+  - name: check ip address is valid or not
+    var:
+      ip: "300.567.980.789"
+    ansible.builtin.debug:
+      msg: "{{ ip | ansible.utils.ipaddr }}"  
